@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FilterPost from "./FilterPost";
-import PostOfficeList from "./PostOfficeList";
+import PostOfficeList from "./PostItemList";
 
 const Result = ({ data, pincode }) => {
   const [searchStr, setSearchStr] = useState("");

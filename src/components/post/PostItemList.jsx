@@ -1,4 +1,4 @@
-import SinglePostOfficeItem from "./SinglePostOfficeItem";
+import SinglePostOfficeItem from "./PostSingleItem";
 
 const PostOfficeList = ({ PostOffice }) => {
   return (

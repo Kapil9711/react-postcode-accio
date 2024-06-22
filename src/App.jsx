@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Search from "./Search";
+import Search from "./components/post/PostSearch";
 import { useEffect } from "react";
-import Result from "./Result";
+import Result from "./components/post/PostResult";
 
 let errorMsg = "";
 
@@ -10,6 +10,7 @@ const App = () => {
   const [query, setQuery] = useState({ str: "" });
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
   const handleSearch = (str) => {
     setIsError(false);
     if (str.length < 6) {
@@ -42,7 +43,9 @@ const App = () => {
         setIsLoading(false);
         setData(data);
       } catch (error) {
-        console.log(error);
+        setIsLoading(false);
+        setIsError(true);
+        errorMsg = "Failed to fetch";
       }
     };
     setTimeout(fetchData, 1000);

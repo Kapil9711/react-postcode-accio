@@ -1,13 +1,12 @@
 import { useRef } from "react";
-import Loading from "./Loading";
-import Error from "./Error";
+import Loading from "../message/Loading";
+import Error from "../message/Error";
 
 const Search = ({ handleSearch, isLoading, isError, errorMsg }) => {
   const inputRef = useRef(null);
-  let errorType = "alert-warning";
-  if (errorMsg === "The requested resource is not found") {
-    errorType = "alert-error";
-  }
+  let errorType = "alert-error";
+  if (errorMsg === "code is not 6 digits") errorType = "alert-warning";
+
   return (
     <>
       <h1 className="text-5xl my-9">Enter Pincode</h1>
