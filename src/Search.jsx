@@ -21,7 +21,7 @@ const Search = ({ handleSearch, isLoading, isError, errorMsg }) => {
         onClick={() => handleSearch(inputRef.current.value)}
         className="btn btn-neutral btn-wide mt-9"
       >
-        lookup
+        Lookup
       </button>
 
       {isLoading && <Loading />}
